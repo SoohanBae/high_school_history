@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <meta http-equiv - "Content-Type" content="text/html" charset="utf-8">
+    <title>덧셈 프로그램 - 입력화면</title>
+  </head>
+  <body>
+    <h2>개인 정보 입력</h2>
+    <form action="http://localhost:8080/dgsw/_7jungbo" method="get">
+      이름: <input type="text" name="name"><br>
+      아이디: <input type="text" name="id"><br>
+      패스워드: <input type="password" name="password"><br><br>
+      성별:
+      남<input type="radio" name="gender" value="male" checked="checked">
+      여<input type="radio" name="gender" value="female"><br><br>
+      메일 수신 여부:
+      공지 메일<input type="checkbox" name="inotice">
+      광고 메일<input type="checkbox" name="cnotice">
+      배송 확인 메일 <input type="checkbox" name="dnotice"><br><br>
+
+      직업:
+      <select name="jobs">
+        <option value="회사원">회사원</option>
+        <option value="학생">학생</option>
+        <option value="선생님">선생님</option>
+        <option value="자영업">자영업</option>
+      </select>
+
+      <br><br>
+      <input type="reset" value="취소">
+      <input type="submit" value="확인">
+    </form>
+  </body>
+</html>

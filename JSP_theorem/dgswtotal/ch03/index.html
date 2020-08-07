@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+            <link rel="stylesheet"
+            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.css" integrity="sha384-BTL0nVi8DnMrNdMQZG1Ww6yasK9ZGnUxL1ZWukXQ7fygA1py52yPp9W4wrR00VML" crossorigin="anonymous">
+        <style>
+/*--------------------------------------------------------------------------------------------- * Copyright (c) Microsoft Corporation. All rights reserved. * Licensed under the MIT License. See License.txt in the project root for license information. *--------------------------------------------------------------------------------------------*/ body { font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback"; font-size: 14px; padding: 0 26px; line-height: 22px; word-wrap: break-word; } #code-csp-warning { position: fixed; top: 0; right: 0; color: white; margin: 16px; text-align: center; font-size: 12px; font-family: sans-serif; background-color:#444444; cursor: pointer; padding: 6px; box-shadow: 1px 1px 1px rgba(0,0,0,.25); } #code-csp-warning:hover { text-decoration: none; background-color:#007acc; box-shadow: 2px 2px 2px rgba(0,0,0,.25); } body.scrollBeyondLastLine { margin-bottom: calc(100vh - 22px); } body.showEditorSelection .code-line { position: relative; } body.showEditorSelection .code-active-line:before, body.showEditorSelection .code-line:hover:before { content: ""; display: block; position: absolute; top: 0; left: -12px; height: 100%; } body.showEditorSelection li.code-active-line:before, body.showEditorSelection li.code-line:hover:before { left: -30px; } .vscode-light.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(0, 0, 0, 0.15); } .vscode-light.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(0, 0, 0, 0.40); } .vscode-light.showEditorSelection .code-line .code-line:hover:before { border-left: none; } .vscode-dark.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(255, 255, 255, 0.4); } .vscode-dark.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(255, 255, 255, 0.60); } .vscode-dark.showEditorSelection .code-line .code-line:hover:before { border-left: none; } .vscode-high-contrast.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(255, 160, 0, 0.7); } .vscode-high-contrast.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(255, 160, 0, 1); } .vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before { border-left: none; } img { max-width: 100%; max-height: 100%; } a { text-decoration: none; } a:hover { text-decoration: underline; } a:focus, input:focus, select:focus, textarea:focus { outline: 1px solid -webkit-focus-ring-color; outline-offset: -1px; } hr { border: 0; height: 2px; border-bottom: 2px solid; } h1 { padding-bottom: 0.3em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; } h1, h2, h3 { font-weight: normal; } h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { font-size: inherit; line-height: auto; } table { border-collapse: collapse; } table > thead > tr > th { text-align: left; border-bottom: 1px solid; } table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table > tbody > tr > td { padding: 5px 10px; } table > tbody > tr + tr > td { border-top: 1px solid; } blockquote { margin: 0 7px 0 5px; padding: 0 16px 0 10px; border-left-width: 5px; border-left-style: solid; } code { font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback"; font-size: 14px; line-height: 19px; } body.wordWrap pre { white-space: pre-wrap; } .mac code { font-size: 12px; line-height: 18px; } pre:not(.hljs), pre.hljs code > div { padding: 16px; border-radius: 3px; overflow: auto; } /** Theming */ pre code { color: var(--vscode-editor-foreground); } .vscode-light pre:not(.hljs), .vscode-light code > div { background-color: rgba(220, 220, 220, 0.4); } .vscode-dark pre:not(.hljs), .vscode-dark code > div { background-color: rgba(10, 10, 10, 0.4); } .vscode-high-contrast pre:not(.hljs), .vscode-high-contrast code > div { background-color: rgb(0, 0, 0); } .vscode-high-contrast h1 { border-color: rgb(0, 0, 0); } .vscode-light table > thead > tr > th { border-color: rgba(0, 0, 0, 0.69); } .vscode-dark table > thead > tr > th { border-color: rgba(255, 255, 255, 0.69); } .vscode-light h1, .vscode-light hr, .vscode-light table > tbody > tr + tr > td { border-color: rgba(0, 0, 0, 0.18); } .vscode-dark h1, .vscode-dark hr, .vscode-dark table > tbody > tr + tr > td { border-color: rgba(255, 255, 255, 0.18); } 
+</style>
+<style>
+/* Tomorrow Theme */ /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */ /* Original theme - https://github.com/chriskempson/tomorrow-theme */ /* Tomorrow Comment */ .hljs-comment, .hljs-quote { color: #8e908c; } /* Tomorrow Red */ .hljs-variable, .hljs-template-variable, .hljs-tag, .hljs-name, .hljs-selector-id, .hljs-selector-class, .hljs-regexp, .hljs-deletion { color: #c82829; } /* Tomorrow Orange */ .hljs-number, .hljs-built_in, .hljs-builtin-name, .hljs-literal, .hljs-type, .hljs-params, .hljs-meta, .hljs-link { color: #f5871f; } /* Tomorrow Yellow */ .hljs-attribute { color: #eab700; } /* Tomorrow Green */ .hljs-string, .hljs-symbol, .hljs-bullet, .hljs-addition { color: #718c00; } /* Tomorrow Blue */ .hljs-title, .hljs-section { color: #4271ae; } /* Tomorrow Purple */ .hljs-keyword, .hljs-selector-tag { color: #8959a8; } .hljs { display: block; overflow-x: auto; color: #4d4d4c; padding: 0.5em; } .hljs-emphasis { font-style: italic; } .hljs-strong { font-weight: bold; }
+</style>
+<style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'HelveticaNeue-Light', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <title>jsp</title>
+    </head>
+    <body>
+        <h1 id="jsp">jsp</h1>
+<h2 id="%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%9A%94%EC%86%8C">스크립트 요소?</h2>
+<p>JSP내에 자바 코드를 삽입하기 위해 사용</p>
+<ol>
+<li>스크립틀릿<br>
+<pre><code>&lt;% 순수 자바 코드 기술%&gt; //서버딴에서 처리함<code></pre></li>
+<li>선언문<br>
+<pre><code>&lt;%! 전역변수, 메소드 %&gt; //선언하면서 제일 먼저 실행됨<code></pre></li>
+<li>표현식
+<pre><code>&lt;%= 클라이언트에 출력할 내용%&gt; //;사용을 하면 안됨, 코드의 간결성을 도와줌<code></pre></li>
+</ol>
+<h2 id="%EC%9D%B5%EC%8A%A4%ED%94%84%EB%A0%88%EC%85%98-%EC%96%B8%EC%96%B4-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0">익스프레션 언어 사용하기</h2>
+<p>servlet에서 값을 넘기면 익스프레션 언어로 쉽게 받는다<br>
+※html</p>
+<pre><code><body>
+1부터 200까지의 합은?! ${result}
+</body>
+</code></pre>
+<p>※java</p>
+<pre><code>RequestDispatcher dispatcher = request.getRequestDispatcher("Hundred2.jsp");
+request.setAttribute("result",total);
+dispatcher.forward(request, response);
+</code></pre>
+<h2 id="%EC%A7%80%EC%8B%9C%EC%9E%90-%EB%AC%B8%EB%B2%95">지시자 문법</h2>
+<p>jsp 컨테이너에 해당 페이지의 특수한 처리 정보를 넣고자 할 때 사용한다. 예를 들어 사용할 스크립팅언어를 지정하거나, 다른 페이지의 컨텐트를 삽입하고, 커스텀 태그 라이브러리를 지정할 때 사용된다.</p>
+<ol>
+<li><pre><code>&lt;%@page %&gt; ContetType은 문자집합, MIME타입 import는 클래스/패키지이름 추가<code></pre></li>
+<li><pre><code>&lt;%@include %&gt; //다른 파일들을 포함시킬 떄 사용<code></pre></li>
+<li><pre><code>&lt;%@taglib&gt; // 새로운 태그를 추가시킬때 사용<code></pre></li>
+</ol>
+<p>※<pre><code>&lt;c:forEach var=&quot;num&quot; items=&quot;${ARR}&quot;&gt; // java의 foreach랑 같다<code></pre></p>
+<h2 id="%EC%A3%BC%EC%84%9D%EB%93%A4">주석들</h2>
+<p><code>//</code> <code>/* */</code> <code>&lt;%-- --%&gt;</code> <code>&lt;!-- --&gt;</code></p>
+<h2 id="%EB%82%B4%EC%9E%A5%EB%B3%80%EC%88%98">내장변수</h2>
+<ol>
+<li><pre><code>request.getParameter(&quot;파일이름&quot;) // 파라미터로 온 값을 받는다<code></pre></li>
+<li><pre><code>out.print(&quot;출력하고 싶은것&quot;); // java코드에서 출력할 때 사용<code></pre></li>
+<li><pre><code>response.sendRedirect(&quot;경로&quot;); // 새로운 페이지로<code></pre></li>
+<li><pre><code>application.getContextPath(); //usl 경로명<code></pre></li>
+<li><pre><code>application.getRealpath(&quot;파일경로&quot;); //실제 경로를 보여준다<code></pre></li>
+</ol>
+<h2 id="jsp-%ED%8C%8C%EC%9D%BC%EC%9E%85%EC%B6%9C%EB%A0%A5">jsp 파일입출력</h2>
+<p>※ 읽기</p>
+<pre><code> <%
+    BufferedReader reader = null; //선언
+    try{
+        String filePath = application.getRealPath("input.txt"); //실제 경로 얻기
+        reader = new BufferedReader(new FileReader(filePath));  //파일 열기
+        while(true) {
+            String str = reader.readLine();  //한줄읽기
+            if(str==null)
+                break;
+            out.println(str+"<br>"); //웹브라우저에 출력
+        }
+    } catch(FileNotFoundException fnfe){
+        out.println("파일이 존재하지 않습니다.");
+    } catch(IOException ioe) {
+        out.println("파일을 읽을 수 없습니다.");
+    } finally {
+        try{
+            reader.close();  //파일을 닫는다
+        }catch(Exception e) {
+        }
+    }
+        
+%>
+</code></pre>
+<p>※ 출력</p>
+<pre><code><%
+    request.setCharacterEncoding("utf-8");
+    String name = request.getParameter("name");
+    String title = request.getParameter("title");
+    String content = request.getParameter("content");
+
+    Date date = new Date();
+    Long time = date.getTime();  
+    String filename = time + ".txt"; //시간을 기준으로 파일저장
+    PrintWriter writer = null;
+
+    try {
+        String filePath = application.getRealPath("/WEB-INF/bbs/" + filename);
+        writer = new PrintWriter(filePath); //쓰는것을 연다
+        writer.printf("제목 : %s %n", title);
+        writer.printf("글쓴이: %s %n", name); //쓴다
+        writer.println(content);
+        out.println("저장되었습니다.");
+    } catch (IOException ioe) {
+        out.println("파일에 데이터를 쓸 수 없습니다.");
+    } finally {
+        try {
+            writer.close(); //닫는다
+        } catch (Exception e) {
+        }
+    }
+%>
+</code></pre>
+<h2 id="%EC%98%88%EC%A0%9C%EB%93%A4">예제들</h2>
+<ul>
+<li><a href="./Hundred.jsp">1부터 100까지의 합</a></li>
+<li><a href="./HundredServlet">1부터 200까지의 합 - 익스프레션 언어</a></li>
+<li><a href="./TwoHundred.jsp">1부터 200까지의 합 - 스크립틀릿</a></li>
+<li><a href="./TwoPower.jsp">제곱하기 - 선언부</a></li>
+<li><a href="./DateTime.jsp">시간확인 - 지시자</a></li>
+<li><a href="./Menu.jsp">메뉴확인 - 지시자</a></li>
+<li><a href="./WinnersServlet">랜덤숫자 - 지시자</a></li>
+<li><a href="./TenMultiply.jsp">주석처리 - 지시자</a></li>
+<li><a href="./YourName.html">너의이름은 - request</a></li>
+<li><a href="./oneToTen1.jsp">숫자출력 - 익스프레션 언어</a></li>
+<li><a href="./oneToTen2.jsp">숫자출력 - out.println()</a></li>
+<li><a href="./Move.jsp">페이지 연결 - 내장변수</a></li>
+<li><a href="./AppTest.jsp">경로얻기 - application</a></li>
+<li><a href="./FileReader.jsp">파일읽기</a></li>
+<li><a href="./languge.jsp">인기 코드 목록 - 파일입출력</a></li>
+<li><a href="./BBSInput.html">게시판 글쓰기 - 파일출력</a></li>
+<li><a href="./BBSInput2.html">게시판 글쓰기2 - 위 예제 수정</a></li>
+<li><a href="./FourRulesInput.html">사칙 연산 수행 - forward</a></li>
+<li><a href="./ChineseMenu.jsp">중국음식 + 시간</a></li>
+<li><a href="./Greetings.jsp">점점 더 크게 인사하기</a></li>
+</ul>
+
+    </body>
+    </html>

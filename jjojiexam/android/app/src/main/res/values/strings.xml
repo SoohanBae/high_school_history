@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">쪽지 스쿨</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">이메일</string>
+    <string name="prompt_password">비밀번호</string>
+    <string name="action_sign_in">로그인</string>
+    <string name="action_sign_in_short">로그인</string>
+    <string name="error_invalid_email">이메일 주소를 확인하세요</string>
+    <string name="error_invalid_password">비밀번호가 너무 짧습니다</string>
+    <string name="error_incorrect_password">이메일 혹은 패스워드가 틀렸습니다</string>
+    <string name="error_field_required">내용을 입력해주세요</string>
+    <string name="permission_rationale">"주소록 권한이 필요합니다"</string>
+    <string name="base_url">http://54.180.153.125:3000/</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_sign_up">Sign in</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

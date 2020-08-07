@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+                android:id="@+id/nav_home"
+                android:icon="@drawable/home"
+                android:title="홈"/>
+        <item
+                android:id="@+id/nav_notEnd"
+                android:icon="@drawable/exam"
+                android:title="미완료 시험"/>
+        <item
+                android:id="@+id/nav_end"
+                android:icon="@drawable/checked"
+                android:title="완료한 시험"/>
+        <item
+                android:id="@+id/nav_calender"
+                android:icon="@drawable/calendar"
+                android:title="캘린더"/>
+    </group>
+
+
+</menu>

@@ -1,0 +1,1 @@
+<%response.sendRedirect("http://blog.naver.com/soohan530");%>

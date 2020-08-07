@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_add"
+          android:title="수업추가"
+          android:orderInCategory="100"
+
+
+          android:icon="@mipmap/add" app:showAsAction="ifRoom"/>
+    <item android:id="@+id/action_refresh"
+          android:title="새로고침"
+          android:orderInCategory="100"
+          android:icon="@mipmap/refresh" app:showAsAction="ifRoom"/>
+    <item android:id="@+id/action_settings"
+          android:title="설정"
+          android:orderInCategory="100"
+          android:icon="@mipmap/setting" app:showAsAction="ifRoom"/>
+</menu>

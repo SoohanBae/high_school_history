@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical">
+
+            <com.daimajia.slider.library.SliderLayout
+                    android:id="@+id/slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="270dp"
+            />
+
+            <com.daimajia.slider.library.Indicators.PagerIndicator
+                    android:id="@+id/custom_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+            />
+
+            <TextView
+                    android:text="배수한"
+                    android:paddingTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/userText"
+                    android:textAlignment="center" android:textSize="30sp"/>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:paddingRight="40dp" android:paddingLeft="40dp">
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:layout_weight="1"
+                >
+                    <TextView
+                            android:text="미완료"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:id="@+id/notEndCntTitle"
+                            android:textAlignment="center" android:textSize="12sp"/>
+                    <TextView
+                            android:text="14 개"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:id="@+id/notEndCnt" android:textSize="24sp"
+                            android:textAlignment="center"
+                            android:layout_marginTop="5dp"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:layout_weight="1"
+                >
+                    <TextView
+                            android:text="완료"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:id="@+id/endCntTitle"
+                            android:textAlignment="center" android:textSize="12sp"/>
+                    <TextView
+                            android:text="13 개"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:id="@+id/endCnt"
+                            android:textAlignment="center" android:textSize="24sp"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:layout_weight="1">
+                    <TextView
+                            android:text="평균 점수"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:id="@+id/scoreAvgTitle"
+                            android:textAlignment="center" android:textSize="12sp"/>
+                    <TextView
+                            android:text="68.8 점"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:id="@+id/scoreAvg" android:textSize="24sp"
+                            android:textAlignment="center"/>
+                </LinearLayout>
+            </LinearLayout>
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/homeContain">
+
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

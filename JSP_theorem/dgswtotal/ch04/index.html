@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.css" integrity="sha384-BTL0nVi8DnMrNdMQZG1Ww6yasK9ZGnUxL1ZWukXQ7fygA1py52yPp9W4wrR00VML" crossorigin="anonymous">
+        <style>
+/*--------------------------------------------------------------------------------------------- * Copyright (c) Microsoft Corporation. All rights reserved. * Licensed under the MIT License. See License.txt in the project root for license information. *--------------------------------------------------------------------------------------------*/ body { font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback"; font-size: 14px; padding: 0 26px; line-height: 22px; word-wrap: break-word; } #code-csp-warning { position: fixed; top: 0; right: 0; color: white; margin: 16px; text-align: center; font-size: 12px; font-family: sans-serif; background-color:#444444; cursor: pointer; padding: 6px; box-shadow: 1px 1px 1px rgba(0,0,0,.25); } #code-csp-warning:hover { text-decoration: none; background-color:#007acc; box-shadow: 2px 2px 2px rgba(0,0,0,.25); } body.scrollBeyondLastLine { margin-bottom: calc(100vh - 22px); } body.showEditorSelection .code-line { position: relative; } body.showEditorSelection .code-active-line:before, body.showEditorSelection .code-line:hover:before { content: ""; display: block; position: absolute; top: 0; left: -12px; height: 100%; } body.showEditorSelection li.code-active-line:before, body.showEditorSelection li.code-line:hover:before { left: -30px; } .vscode-light.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(0, 0, 0, 0.15); } .vscode-light.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(0, 0, 0, 0.40); } .vscode-light.showEditorSelection .code-line .code-line:hover:before { border-left: none; } .vscode-dark.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(255, 255, 255, 0.4); } .vscode-dark.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(255, 255, 255, 0.60); } .vscode-dark.showEditorSelection .code-line .code-line:hover:before { border-left: none; } .vscode-high-contrast.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(255, 160, 0, 0.7); } .vscode-high-contrast.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(255, 160, 0, 1); } .vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before { border-left: none; } img { max-width: 100%; max-height: 100%; } a { text-decoration: none; } a:hover { text-decoration: underline; } a:focus, input:focus, select:focus, textarea:focus { outline: 1px solid -webkit-focus-ring-color; outline-offset: -1px; } hr { border: 0; height: 2px; border-bottom: 2px solid; } h1 { padding-bottom: 0.3em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; } h1, h2, h3 { font-weight: normal; } h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { font-size: inherit; line-height: auto; } table { border-collapse: collapse; } table > thead > tr > th { text-align: left; border-bottom: 1px solid; } table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table > tbody > tr > td { padding: 5px 10px; } table > tbody > tr + tr > td { border-top: 1px solid; } blockquote { margin: 0 7px 0 5px; padding: 0 16px 0 10px; border-left-width: 5px; border-left-style: solid; } code { font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback"; font-size: 14px; line-height: 19px; } body.wordWrap pre { white-space: pre-wrap; } .mac code { font-size: 12px; line-height: 18px; } pre:not(.hljs), pre.hljs code > div { padding: 16px; border-radius: 3px; overflow: auto; } /** Theming */ pre code { color: var(--vscode-editor-foreground); } .vscode-light pre:not(.hljs), .vscode-light code > div { background-color: rgba(220, 220, 220, 0.4); } .vscode-dark pre:not(.hljs), .vscode-dark code > div { background-color: rgba(10, 10, 10, 0.4); } .vscode-high-contrast pre:not(.hljs), .vscode-high-contrast code > div { background-color: rgb(0, 0, 0); } .vscode-high-contrast h1 { border-color: rgb(0, 0, 0); } .vscode-light table > thead > tr > th { border-color: rgba(0, 0, 0, 0.69); } .vscode-dark table > thead > tr > th { border-color: rgba(255, 255, 255, 0.69); } .vscode-light h1, .vscode-light hr, .vscode-light table > tbody > tr + tr > td { border-color: rgba(0, 0, 0, 0.18); } .vscode-dark h1, .vscode-dark hr, .vscode-dark table > tbody > tr + tr > td { border-color: rgba(255, 255, 255, 0.18); } 
+</style>
+<style>
+/* Tomorrow Theme */ /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */ /* Original theme - https://github.com/chriskempson/tomorrow-theme */ /* Tomorrow Comment */ .hljs-comment, .hljs-quote { color: #8e908c; } /* Tomorrow Red */ .hljs-variable, .hljs-template-variable, .hljs-tag, .hljs-name, .hljs-selector-id, .hljs-selector-class, .hljs-regexp, .hljs-deletion { color: #c82829; } /* Tomorrow Orange */ .hljs-number, .hljs-built_in, .hljs-builtin-name, .hljs-literal, .hljs-type, .hljs-params, .hljs-meta, .hljs-link { color: #f5871f; } /* Tomorrow Yellow */ .hljs-attribute { color: #eab700; } /* Tomorrow Green */ .hljs-string, .hljs-symbol, .hljs-bullet, .hljs-addition { color: #718c00; } /* Tomorrow Blue */ .hljs-title, .hljs-section { color: #4271ae; } /* Tomorrow Purple */ .hljs-keyword, .hljs-selector-tag { color: #8959a8; } .hljs { display: block; overflow-x: auto; color: #4d4d4c; padding: 0.5em; } .hljs-emphasis { font-style: italic; } .hljs-strong { font-weight: bold; }
+</style>
+<style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'HelveticaNeue-Light', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="%EC%BF%A0%ED%82%A4">쿠키</h1>
+<h2 id="%EA%B0%9C%EB%85%90">개념</h2>
+<p>사용자의 컴퓨터에 저장되는 작은 기록 정보 파일</p>
+<h2 id="%EC%82%AC%EC%9A%A9%EB%B2%95">사용법</h2>
+<ul>
+<li><pre><code>response.addCookie(new Cookie(&quot;이름&quot;,값&quot;)) // 쿠키를 저장한다</code></pre></li>
+<li><pre><code>request.getCookies() //쿠키를 다 가지고 온다</code></pre></li>
+<li><pre><code>response.addCookie(new Cookie(&quot;이미있는 이름&quot;,값&quot;)) // 쿠키를 수정한다</code></pre></li>
+<li><pre><code>cookie.setMaxAge(0) //쿠키의 만료시간을 0으로 하여 삭제한다</code></pre></li>
+<li><pre><code>cookie.setPath(&quot;경로&quot;) //특정 경로를 갖는 URL로만 전송되도록 만든다</code></pre></li>
+</ul>
+<h2 id="%EC%98%88%EC%A0%9C">예제</h2>
+<ul>
+<li><a href="./StoreCookies.jsp">쿠키 저장</a></li>
+<li><a href="./ReadCookies.jsp">쿠키 읽기</a></li>
+<li><a href="./ModifyCookie.jsp">쿠키 수정</a></li>
+<li><a href="./DeleteCookie.jsp">쿠키 삭제</a></li>
+<li><a href="./sub1/StoreCookies.jsp">쿠키 특정 경로</a></li>
+<li><a href="./sub1/StoreCookies.jsp">쿠키 특정 경로 읽기</a></li>
+<li><a href="./sub2/StoreCookies.jsp">쿠키 특정 경로 읽기 - 다른경로</a></li>
+</ul>
+<br>
+<h1 id="%EC%84%B8%EC%85%98">세션</h1>
+<h2 id="%EA%B0%9C%EB%85%90">개념</h2>
+<p>세션(session)은 웹 서버 쪽의 웹 컨테이너에 상태를 유지하기 위한 정보를 저장한다.<br>
+세션은 사용자가 웹 브라우저를 종료했을 때, 서버가 재시작 되었을 때, 종료 코드가 실행될 때 종료된다.</p>
+<h2 id="%EC%82%AC%EC%9A%A9%EB%B2%95">사용법</h2>
+<ul>
+<li><pre><code>HttpSession session = request.getSession() //세션시작</code></pre></li>
+<li><pre><code>session.setAttribute(&quot;이름&quot;, 값) //세션에 값 쓰기</code></pre></li>
+<li><pre><code>session.getAttribute(&quot;이름&quot;) //세션 값 읽기</code></pre></li>
+<li><pre><code>session.setAttribute(&quot;이미있는 이름&quot;) //세션 값 수정</code></pre></li>
+<li><pre><code>session.setMaxInactiveinterval(시간) //세션 종료 시간 설정</code></pre></li>
+<li><pre><code>request.getSession() //이미 시작된 세션을 계속한다</code></pre></li>
+<li><pre><code>session.invalidate() //세션 종료하기</code></pre></li>
+</ul>
+<h2 id="%EC%98%88%EC%A0%9C">예제</h2>
+<ul>
+<li><a href="./ptest/Food.html">좋아하는 음식 - set,get,종료</a></li>
+<li><a href="./ptest/Food2.html">위 예제 + 시간만료</a></li>
+<li><a href="./subscribe/PersonalInfo.html">회원가입</a></li>
+<li><a href="./sub3/InputCookie.html">어벤져스</a></li>
+<li><a href="./sub3/LoginForm.html">로그인 폼</a></li>
+</ul>
+
+    </body>
+    </html>

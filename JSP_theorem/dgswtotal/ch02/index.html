@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+		<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.css" integrity="sha384-BTL0nVi8DnMrNdMQZG1Ww6yasK9ZGnUxL1ZWukXQ7fygA1py52yPp9W4wrR00VML" crossorigin="anonymous">
+        <style>
+/*--------------------------------------------------------------------------------------------- * Copyright (c) Microsoft Corporation. All rights reserved. * Licensed under the MIT License. See License.txt in the project root for license information. *--------------------------------------------------------------------------------------------*/ body { font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback"; font-size: 14px; padding: 0 26px; line-height: 22px; word-wrap: break-word; } #code-csp-warning { position: fixed; top: 0; right: 0; color: white; margin: 16px; text-align: center; font-size: 12px; font-family: sans-serif; background-color:#444444; cursor: pointer; padding: 6px; box-shadow: 1px 1px 1px rgba(0,0,0,.25); } #code-csp-warning:hover { text-decoration: none; background-color:#007acc; box-shadow: 2px 2px 2px rgba(0,0,0,.25); } body.scrollBeyondLastLine { margin-bottom: calc(100vh - 22px); } body.showEditorSelection .code-line { position: relative; } body.showEditorSelection .code-active-line:before, body.showEditorSelection .code-line:hover:before { content: ""; display: block; position: absolute; top: 0; left: -12px; height: 100%; } body.showEditorSelection li.code-active-line:before, body.showEditorSelection li.code-line:hover:before { left: -30px; } .vscode-light.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(0, 0, 0, 0.15); } .vscode-light.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(0, 0, 0, 0.40); } .vscode-light.showEditorSelection .code-line .code-line:hover:before { border-left: none; } .vscode-dark.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(255, 255, 255, 0.4); } .vscode-dark.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(255, 255, 255, 0.60); } .vscode-dark.showEditorSelection .code-line .code-line:hover:before { border-left: none; } .vscode-high-contrast.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(255, 160, 0, 0.7); } .vscode-high-contrast.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(255, 160, 0, 1); } .vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before { border-left: none; } img { max-width: 100%; max-height: 100%; } a { text-decoration: none; } a:hover { text-decoration: underline; } a:focus, input:focus, select:focus, textarea:focus { outline: 1px solid -webkit-focus-ring-color; outline-offset: -1px; } hr { border: 0; height: 2px; border-bottom: 2px solid; } h1 { padding-bottom: 0.3em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; } h1, h2, h3 { font-weight: normal; } h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { font-size: inherit; line-height: auto; } table { border-collapse: collapse; } table > thead > tr > th { text-align: left; border-bottom: 1px solid; } table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table > tbody > tr > td { padding: 5px 10px; } table > tbody > tr + tr > td { border-top: 1px solid; } blockquote { margin: 0 7px 0 5px; padding: 0 16px 0 10px; border-left-width: 5px; border-left-style: solid; } code { font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback"; font-size: 14px; line-height: 19px; } body.wordWrap pre { white-space: pre-wrap; } .mac code { font-size: 12px; line-height: 18px; } pre:not(.hljs), pre.hljs code > div { padding: 16px; border-radius: 3px; overflow: auto; } /** Theming */ pre code { color: var(--vscode-editor-foreground); } .vscode-light pre:not(.hljs), .vscode-light code > div { background-color: rgba(220, 220, 220, 0.4); } .vscode-dark pre:not(.hljs), .vscode-dark code > div { background-color: rgba(10, 10, 10, 0.4); } .vscode-high-contrast pre:not(.hljs), .vscode-high-contrast code > div { background-color: rgb(0, 0, 0); } .vscode-high-contrast h1 { border-color: rgb(0, 0, 0); } .vscode-light table > thead > tr > th { border-color: rgba(0, 0, 0, 0.69); } .vscode-dark table > thead > tr > th { border-color: rgba(255, 255, 255, 0.69); } .vscode-light h1, .vscode-light hr, .vscode-light table > tbody > tr + tr > td { border-color: rgba(0, 0, 0, 0.18); } .vscode-dark h1, .vscode-dark hr, .vscode-dark table > tbody > tr + tr > td { border-color: rgba(255, 255, 255, 0.18); } 
+</style>
+<style>
+/* Tomorrow Theme */ /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */ /* Original theme - https://github.com/chriskempson/tomorrow-theme */ /* Tomorrow Comment */ .hljs-comment, .hljs-quote { color: #8e908c; } /* Tomorrow Red */ .hljs-variable, .hljs-template-variable, .hljs-tag, .hljs-name, .hljs-selector-id, .hljs-selector-class, .hljs-regexp, .hljs-deletion { color: #c82829; } /* Tomorrow Orange */ .hljs-number, .hljs-built_in, .hljs-builtin-name, .hljs-literal, .hljs-type, .hljs-params, .hljs-meta, .hljs-link { color: #f5871f; } /* Tomorrow Yellow */ .hljs-attribute { color: #eab700; } /* Tomorrow Green */ .hljs-string, .hljs-symbol, .hljs-bullet, .hljs-addition { color: #718c00; } /* Tomorrow Blue */ .hljs-title, .hljs-section { color: #4271ae; } /* Tomorrow Purple */ .hljs-keyword, .hljs-selector-tag { color: #8959a8; } .hljs { display: block; overflow-x: auto; color: #4d4d4c; padding: 0.5em; } .hljs-emphasis { font-style: italic; } .hljs-strong { font-weight: bold; }
+</style>
+<style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'HelveticaNeue-Light', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+		</style>
+		<title>servlet</title>
+    </head>
+    <body>
+        <h1 id="servlet-%EA%B8%B0%EC%B4%88">Servlet 기초</h1>
+<h2 id="%EA%B0%9C%EC%9A%94">개요</h2>
+<p>Servlet을 사용하기 위한 기본틀이 있다.</p>
+<pre><code>import javax.servlet.http.*;
+import javax.servlet.*;
+import java,io,*;
+
+public class ex1 extends HttpServlet {
+    public void doGet(HttpServletRequest request, HttpServletResponse response throws ServletException, IOException {
+
+	response.setContentType("text/html; charset=문자형");	
+	
+	PrintWriter out = response.getWriter();
+	out.printf("html코드");
+    }
+}
+</code></pre>
+<p>컴파일을 한 뒤 <code>WEB-INF\Classes</code> 하위폴더에 클래스 파일을 넣는다.<br>
+또한 <code>WEB-INF</code>에 아래와 같이 등록한다</p>
+<pre><code>&lt;servlet&gt;
+	&lt;servlet-name&gt;ex2_1-servlet&lt;/servlet-name&gt;
+	&lt;servlet-class&gt;ex2_1&lt;/servlet-class&gt;
+&lt;/servlet&gt;
+&lt;servlet-mapping&gt;
+	&lt;servlet-name&gt;ex2_1-servlet&lt;/servlet-name&gt;
+	&lt;url-pattern&gt;/ch02/ex2_1&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;
+</code></pre>
+<br>
+<br>
+<h2 id="%EC%98%88%EC%A0%9C-1---1%EB%B6%80%ED%84%B0-100%EC%9D%98-%ED%95%A9-%EC%B6%9C%EB%A0%A5%ED%95%98%EB%8A%94-%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%A7%8C%EB%93%A4%EA%B8%B0">예제 1 - 1부터 100의 합 출력하는 페이지 만들기</h2>
+
+
+<pre><code>import javax.servlet.http.*;
+import javax.servlet.*;
+import java.io.*;
+
+public class ex2_1 extends HttpServlet{
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+		int total = 0;
+		int n = 100;
+		total = n*(n+1)/2;
+
+		PrintWriter out = response.getWriter();
+		out.println("<HTML>");
+		out.println("<HEAD><META http-equiv = \"content-type\" content=\"text/html\"; charset=\"utf-8\"><TITLE>1부터 100의 합</TITLE><HEAD>");
+		out.println("<BODY>");
+		out.printf("0~100합 %d",total);
+		out.println("</BODY>");
+		out.println("</HTML>");
+	}
+}
+</code></pre>
+
+
+<br>
+<iframe src="http://localhost:8080/dgswtotal/ch02/ex2_1" frameborder="2" width="600" height="300" marginwidth="0" marginheight="0" scrolling="yes"></iframe>
+<br><p><a href="http://localhost:8080/dgswtotal/ch02/ex2_1">예제1</a></p>
+
+<h2 id="%EC%98%88%EC%A0%9C-2---2%EB%98%90%EB%8A%94-3%EC%9D%98-%EB%B0%B0%EC%88%98%EA%B0%80-%EC%95%84%EB%8B%8C-%EC%88%98%EC%9D%98-%EC%B4%9D-%ED%95%A9%EC%9D%84-%EA%B5%AC%ED%95%98%EB%8A%94-%ED%8E%98%EC%9D%B4%EC%A7%80">예제 2 - 2또는 3의 배수가 아닌 수의 총 합을 구하는 페이지</h2>
+<pre><code>for (int i = 1; i <= n; i++) {
+	if(i%2 != 0 && i%3 != 0 ){
+		total+=i;
+	}
+}
+</code></pre>
+<iframe src="http://localhost:8080/dgswtotal/ch02/ex2_1_2" frameborder="2" width="600" height="300" marginwidth="0" marginheight="0" scrolling="yes"></iframe>
+<br><a href="http://localhost:8080/dgswtotal/ch02/ex2_1_2">예제2</a>
+<br>
+<h2 id="%EC%98%88%EC%A0%9C-3---%EC%9B%B9-%ED%8E%98%EC%9D%B4%EC%A7%80%EB%A1%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-%EB%B0%9B%EA%B3%A0-%EA%B3%84%EC%82%B0%ED%95%98%EA%B8%B0">예제 3 - 웹 페이지로 데이터를 받고 계산하기</h2>
+<p>※ html</p>
+<pre><code>&lt;HTML&gt;
+	&lt;HEAD&gt;
+		&lt;META http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+		&lt;TITLE&gt;덧셈 프로그램 - 입력 화면&lt;/TITLE&gt;
+	&lt;/HEAD&gt;
+	&lt;BODY&gt;
+		&lt;form action="http://localhost:8080/dgswtotal/ch02/AdderInput" method="get"&gt;
+		첫번째 수: &lt;INPUT TYPE=TEXT NAME=NUM1&gt;&lt;BR&gt;
+		두번째 수: &lt;INPUT TYPE=TEXT NAME=NUM2&gt;&lt;BR&gt;
+		&lt;INPUT TYPE=SUBMIT VALUE='더하기'&gt;
+		&lt;/FORM&gt;
+	&lt;/BODY&gt;
+&lt;/HTML&gt;
+
+</code></pre>
+<p>※ java</p>
+<pre><code>String str1 = request.getParameter("NUM1");
+String str2 = request.getParameter("NUM2");
+int num1 = Integer.parseInt(str1);
+int num2 = Integer.parseInt(str2);
+</code></pre>
+<iframe src="http://localhost:8080/dgswtotal/ch02/AdderInput.html" frameborder="2" width="600" height="300" marginwidth="0" marginheight="0" scrolling="yes"></iframe>
+<br><a href="http://localhost:8080/dgswtotal/ch02/ex2_1">예제3</a>
+<br>
+<h2 id="%EC%98%88%EC%A0%9C-4---post-%EB%A9%94%EC%84%9C%EB%93%9C%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%84%EC%86%A1">예제 4 - post 메서드를 이용한 데이터 전송</h2>
+<p>※ 위에서 method 방식만 다를뿐임
+<pre><code>&lt;form action=&quot;http://localhost:8080/dgswtotal/ch02/AdderInput&quot; method=&quot;post&quot;&gt;</code></pre></p>
+<!--코드 프레임 넣기--> 
+<br>
+<h2 id="%EC%98%88%EC%A0%9C-56---doget%EA%B3%BC-dopost">예제 5,6 - doGet과 doPost</h2>
+<p>※ get방식과 post방식을 쓰는 곳을 구분해야 한다.<br>
+※ get방식은 주소에 값이 들어가기 때문에 쇼핑물 같은데서 사용<br>
+※ post방식은 주소에 값이 들어가지 않고 숨겨서 값을 보내기 때문에 회원가입에서 사용</p>
+<p><a href="http://localhost:8080/dgswtotal/ch02/PinfoInput.html">새로운 탭-doGet방식</a><br>
+<a href="http://localhost:8080/dgswtotal/ch02/PinfoInput2.html">새로운 탭-doPost방식</a></p>
+
+<br>
+<h2 id="%EC%98%88%EC%A0%9C-7---%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98-%EC%88%98%EC%97%B4">예제 7 - 피보나치 수열</h2>
+<iframe src="http://localhost:8080/dgswtotal/ch02/fibo" frameborder="2" width="600" height="300" marginwidth="0" marginheight="0" scrolling="yes"></iframe>
+<br><a href="http://localhost:8080/dgswtotal/ch02/ex2_1">예제7</a>
+<br>
+<h2 id="%EC%98%88%EC%A0%9C-8---%EC%84%B1%EA%B2%A9%ED%85%8C%EC%8A%A4%ED%8A%B8">예제 8 - 성격테스트</h2>
+	
+<iframe src="http://localhost:8080/dgswtotal/ch02/ptest.html" frameborder="2" width="600" height="300" marginwidth="0" marginheight="0" scrolling="yes"></iframe>
+<br><a href="http://localhost:8080/dgswtotal/ch02/ex2_1">예제8</a>
+    </body>
+	</html>

@@ -3,7 +3,6 @@
 
 ## [3년간 SW고등학교 생활 회고 - 20살 개발자가 되기까지](https://blog.naver.com/soohan530/221778150335)
 - [스택계산기](./stack_calculator)
-- [로또 시뮬레이션](./korea-lotto-simulation)
 - [GPS 보물찾기앱](https://github.com/gudwlsg1/android)
 - [학생 이동 관리 프로그램](./DGSWproject)
 - [c언어 콘솔창 지뢰찾기](./C-Minesweeper)

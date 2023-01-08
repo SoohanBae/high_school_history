@@ -1,0 +1,43 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+pageEncoding="EUC-KR"%>
+<%@ page import="java.util.*, java.io.*" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+
+<title>Insert title here</title>
+</head>
+
+
+
+
+
+<form method="post" enctype="multipart/form-data" action="imgup.jsp">
+<input type="file" name="filename1" size=40>
+<input type="submit" value="업로드"><br><br>
+</form>
+
+<body>
+<img src="http://localhost:8080/Image_server/img/AA43B100-BB2D-420A-962F-D38250422D39.png" width="630" height="891"/>
+<%
+String path = "G:\\bus_info\\jsp\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\Image_server\\img";
+File dirFile = new File(path);
+File []fileList=dirFile.listFiles();
+
+for(File tempFile : fileList){
+	if(tempFile.isFile()){
+		String tempPath = tempFile.getParent();
+		String tempFileName=tempFile.getName();
+	    System.out.println("Path="+tempPath);
+	    System.out.println("FileName="+tempFileName);
+	}
+}
+%>
+
+</body>
+</html>
+
+
+

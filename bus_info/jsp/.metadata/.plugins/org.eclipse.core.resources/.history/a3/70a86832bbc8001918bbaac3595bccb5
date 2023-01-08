@@ -1,0 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ page import="java.util.*,java.io.*" %>
+
+<%
+    request.setCharacterEncoding("euc-kr");
+    String name = request.getParameter("name");
+   
+    System.out.printlin(name);
+%>

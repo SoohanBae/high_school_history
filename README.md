@@ -15,3 +15,4 @@
 - [openCV 손가락 인식 그림판](./VoidPainter)
 - [급식실쓰레기 구분 GUI](./what_trash_project)
 - [쪽지시험 플랫폼](./jjojiexam)
+- [버스정보 전광판](./bus_info)
